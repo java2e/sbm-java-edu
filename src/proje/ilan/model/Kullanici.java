@@ -1,8 +1,6 @@
 package proje.ilan.model;
 
-public class Kullanici {
-
-    private Long id;
+public class Kullanici extends BaseModel {
 
     private String adi;
 
@@ -13,15 +11,6 @@ public class Kullanici {
    Kapsülleme
    Encapsulation
     */
-    public Long getId()
-    {
-        return this.id;
-    }
-
-    public void setId(Long id)
-    {
-        this.id = id;
-    }
 
     public String getAdi()
     {

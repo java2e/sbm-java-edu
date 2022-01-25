@@ -1,5 +1,7 @@
 package proje.ilan;
 
+import proje.ilan.model.Kullanici;
+
 public class Test {
 
 
@@ -21,4 +23,13 @@ public class Test {
 
 
      */
+
+    public static void main(String[] args) {
+
+        Kullanici kullanici = new Kullanici();
+
+        kullanici.setId(12l);
+
+
+    }
 }
