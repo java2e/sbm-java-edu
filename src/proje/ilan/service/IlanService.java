@@ -10,16 +10,6 @@ public class IlanService extends Service<Ilan> implements BaseService<Ilan>{
 
 
 
-    public void sil(Ilan ilan){
-        if(DBUtil.ILAN_LISTESI != null) {
-            DBUtil.ILAN_LISTESI.remove(ilan);
-            logYaz("İlan eklendi!",ilan.toString());
-        }
-        else{
-            logYaz("İlan listesi boş!");
-        }
-    }
-
     @Override
     public List<?> getList() {
         return null;

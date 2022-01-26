@@ -1,10 +1,10 @@
 package proje.ilan.util;
 
 import proje.ilan.model.Ilan;
+import proje.ilan.model.IlanSurec;
 import proje.ilan.model.Kullanici;
-import proje.ilan.service.IlanSurec;
+import proje.ilan.service.IlanSurecService;
 
-import javax.swing.plaf.PanelUI;
 import java.util.List;
 
 public class DBUtil {

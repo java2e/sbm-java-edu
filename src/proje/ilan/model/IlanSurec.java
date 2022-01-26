@@ -4,7 +4,7 @@ public class IlanSurec extends BaseModel {
 
     private Ilan ilan;
 
-    private String surec;
+    private Surec surec;
 
     public Ilan getIlan() {
         return ilan;
@@ -14,11 +14,19 @@ public class IlanSurec extends BaseModel {
         this.ilan = ilan;
     }
 
-    public String getSurec() {
+    public Surec getSurec() {
         return surec;
     }
 
-    public void setSurec(String surec) {
+    public void setSurec(Surec surec) {
         this.surec = surec;
+    }
+
+    @Override
+    public String toString() {
+        return "IlanSurec{" +
+                "ilan=" + ilan +
+                ", surec=" + surec +
+                '}';
     }
 }

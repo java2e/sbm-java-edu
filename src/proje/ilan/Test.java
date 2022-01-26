@@ -1,10 +1,8 @@
 package proje.ilan;
 
-import proje.ilan.model.BaseModel;
-import proje.ilan.model.Ilan;
-import proje.ilan.model.Kategori;
-import proje.ilan.model.Kullanici;
+import proje.ilan.model.*;
 import proje.ilan.service.IlanService;
+import proje.ilan.service.IlanSurecService;
 import proje.ilan.service.KullaniciService;
 import proje.ilan.util.DBUtil;
 
@@ -92,8 +90,11 @@ public class Test {
         IlanService ilanService = new IlanService();
         ilanService.ekle(ilan1);
 
+        System.out.println("<----- Süreç Değişimi ----->");
 
-        ArrayList liste = new ArrayList<String>();
+        IlanSurecService ilanSurecService = new IlanSurecService();
+        ilanSurecService.surecDegistir(ilan1);
+
 
     }
 }

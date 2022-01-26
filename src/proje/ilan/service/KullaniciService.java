@@ -11,21 +11,6 @@ public class KullaniciService extends Service<Kullanici> implements BaseService<
 
 
 
-    public void sil(Kullanici kullanici)
-    {
-        for(int i=0;i<DBUtil.KULLANICI_LISTESI.size();i++)
-        {
-            if(DBUtil.KULLANICI_LISTESI.get(i).getId().equals(kullanici.getId()))
-            {
-                DBUtil.KULLANICI_LISTESI.remove(i);
-                break;
-            }
-        }
-
-        logYaz("Kullanıcı silindi!",kullanici.toString());
-
-    }
-
 
     @Override
     public List<?> getList() {
