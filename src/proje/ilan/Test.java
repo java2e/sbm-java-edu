@@ -35,10 +35,6 @@ public class Test {
     BaseModel baseModel2= new Kullanici();
 
 
-
-
-
-
      */
 
     public static void main(String[] args) {
@@ -78,6 +74,8 @@ public class Test {
         Kullanici kullanici = DBUtil.KULLANICI_LISTESI.get(3);
         kullaniciService.sil(kullanici);
 
+        kullaniciService.sil(null);
+
 
 
         Ilan ilan1 = new Ilan();
@@ -98,3 +96,5 @@ public class Test {
 
     }
 }
+
+
