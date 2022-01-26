@@ -9,7 +9,7 @@ public class BaseModel {
     private Long id;
 
     public Long getId() {
-        return 85l;
+        return this.id;
     }
 
     public void setId(Long id) {
@@ -19,7 +19,7 @@ public class BaseModel {
 
 /*
 Yazılım Mühendisliği
-Tasarım Kalıpları (Design Pattern)
+Tasarım Kalıpları
 ASID
 SOLID
 Clean Code!

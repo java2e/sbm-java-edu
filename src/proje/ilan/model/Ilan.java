@@ -50,12 +50,14 @@ public class Ilan extends BaseModel {
         this.kullanici = kullanici;
     }
 
+
     @Override
-    public Long getId() {
-         super.getId();
-         //alogirtma
-         return 45l;
+    public String toString() {
+        return "Ilan{" +
+                "baslik='" + baslik + '\'' +
+                ", detay='" + detay + '\'' +
+                ", kategori=" + kategori +
+                ", kullanici=" + kullanici +
+                '}';
     }
-
-
 }

@@ -29,9 +29,13 @@ diziler yapmıs oldugunuz işlemleri
  */
 
 import java.util.List;
-
-public interface BaseService {
+/*
+<T> generic anlamı
+ */
+public interface BaseService<T> {
 
     public List<?> getList();
+
+    public void ekle(T t);
 
 }

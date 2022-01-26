@@ -6,34 +6,30 @@ import proje.ilan.util.DBUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KullaniciService extends Service implements BaseService {
+public class KullaniciService extends Service<Kullanici> implements BaseService<Kullanici> {
 
 
-    public void ekle(Kullanici kullanici)
-    {
-        if(DBUtil.KULLANICI_LISTESI == null)
-            DBUtil.KULLANICI_LISTESI = new ArrayList<>();
 
-        DBUtil.KULLANICI_LISTESI .add(kullanici);
-
-       /*
-       NullPointer hatası alacak!!!!!
-       diziler[0] = 12;
-        */
-
-        logYaz("Kullanıcı eklendi!",kullanici.toString());
-
-    }
 
     public void sil(Kullanici kullanici)
     {
+        for(int i=0;i<DBUtil.KULLANICI_LISTESI.size();i++)
+        {
+            if(DBUtil.KULLANICI_LISTESI.get(i).getId().equals(kullanici.getId()))
+            {
+                DBUtil.KULLANICI_LISTESI.remove(i);
+                break;
+            }
+        }
+
+        logYaz("Kullanıcı silindi!",kullanici.toString());
 
     }
 
 
     @Override
     public List<?> getList() {
-        return null;
+        return DBUtil.KULLANICI_LISTESI;
     }
 
     @Override

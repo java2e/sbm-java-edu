@@ -2,9 +2,13 @@ package proje.ilan;
 
 import proje.ilan.model.BaseModel;
 import proje.ilan.model.Ilan;
+import proje.ilan.model.Kategori;
 import proje.ilan.model.Kullanici;
 import proje.ilan.service.IlanService;
 import proje.ilan.service.KullaniciService;
+import proje.ilan.util.DBUtil;
+
+import java.util.ArrayList;
 
 public class Test {
 
@@ -73,7 +77,23 @@ public class Test {
             kullaniciService.ekle(kullanici);
         }
 
+        Kullanici kullanici = DBUtil.KULLANICI_LISTESI.get(3);
+        kullaniciService.sil(kullanici);
 
+
+
+        Ilan ilan1 = new Ilan();
+        ilan1.setId(1l);
+        ilan1.setBaslik("Araba 1");
+        ilan1.setDetay("Araba ilanıdır!");
+        ilan1.setKategori(Kategori.ARAC);
+        ilan1.setKullanici(DBUtil.KULLANICI_LISTESI.get(0));
+
+        IlanService ilanService = new IlanService();
+        ilanService.ekle(ilan1);
+
+
+        ArrayList liste = new ArrayList<String>();
 
     }
 }
