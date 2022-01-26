@@ -37,4 +37,14 @@ public class Kullanici extends BaseModel {
     public void setAdres(String adres) {
         this.adres = adres;
     }
+
+    @Override
+    public String toString() {
+        return "Kullanici{" +
+                "id="+getId()+
+                "adi='" + adi + '\'' +
+                ", soyadi='" + soyadi + '\'' +
+                ", adres='" + adres + '\'' +
+                '}';
+    }
 }
