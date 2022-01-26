@@ -1,6 +1,9 @@
 package proje.ilan;
 
+import proje.ilan.model.BaseModel;
+import proje.ilan.model.Ilan;
 import proje.ilan.model.Kullanici;
+import proje.ilan.service.IlanService;
 
 public class Test {
 
@@ -17,6 +20,17 @@ public class Test {
     Servis => fonksiyonları yazacagız
 
 
+    Polimorfiz nedir?
+
+    Çok biçimlilik ve sahiplik durumunu anlatmaktır.Nesnelerimiz sahiplik durumunda bahsedilir.
+
+    ilan Kullanici IlanSurec <= BaseModel
+
+    ilan bir basemodeldir.
+
+    BaseModel baseModel = new Ilan();
+    BaseModel baseModel2= new Kullanici();
+
 
 
 
@@ -26,10 +40,27 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Kullanici kullanici = new Kullanici();
+        BaseModel baseModel = new BaseModel();
 
-        kullanici.setId(12l);
+        System.out.println("id => "+baseModel.getId());
 
+        baseModel = new Ilan();
+
+        System.out.println("id => "+baseModel.getId());
+
+        baseModel = new Kullanici();
+
+        System.out.println("id =>"+baseModel.getId());
+        /*
+        Ilan ilan = (Ilan) baseModel; // convert casting
+
+        BaseModel model2 = new Kullanici();
+
+        Ilan ilan2 = new Kullanici();
+         */
+
+        IlanService ilanService = new IlanService();
+        ilanService.methodYaz("asldsakdajk");
 
     }
 }

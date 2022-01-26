@@ -49,4 +49,13 @@ public class Ilan extends BaseModel {
     public void setKullanici(Kullanici kullanici) {
         this.kullanici = kullanici;
     }
+
+    @Override
+    public Long getId() {
+         super.getId();
+         //alogirtma
+         return 45l;
+    }
+
+
 }
