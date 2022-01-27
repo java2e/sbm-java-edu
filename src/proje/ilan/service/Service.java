@@ -49,22 +49,17 @@ public abstract class Service<T> {
             logYaz("Kullanıcı eklendi!",kullanici.toString());
 
         }
-        else if(t instanceof IlanSurec)
-        {
+        else if(t instanceof IlanSurec) {
             IlanSurec ilanSurec = (IlanSurec) t;
-            if(DBUtil.ILAN_SUREC_LISTESI == null)
-            {
+            if (DBUtil.ILAN_SUREC_LISTESI == null) {
                 DBUtil.ILAN_SUREC_LISTESI = new ArrayList<>();
             }
 
             DBUtil.ILAN_SUREC_LISTESI.add(ilanSurec);
 
-            logYaz("İlan Süreç Bilgi Eklendi!",ilanSurec.toString());
-
+            logYaz("İlan Süreç Bilgi Eklendi!", ilanSurec.toString());
 
         }
-
-
     }
 
     public void sil(T t){

@@ -11,8 +11,8 @@ public class IlanService extends Service<Ilan> implements BaseService<Ilan>{
 
 
     @Override
-    public List<?> getList() {
-        return null;
+    public List<Ilan> getList() {
+        return DBUtil.ILAN_LISTESI;
     }
 
     @Override

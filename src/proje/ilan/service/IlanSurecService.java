@@ -38,7 +38,7 @@ public class IlanSurecService extends Service<IlanSurec> implements BaseService<
 
 
     @Override
-    public List<?> getList() {
+    public List<IlanSurec> getList() {
         return DBUtil.ILAN_SUREC_LISTESI;
     }
 
